@@ -1,0 +1,72 @@
+<div class='panel panel-primary' *ngIf='car'>
+    <div class='panel-heading' style='font-size:large'>
+        {{pageTitle + ': ' + car.brand }}
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>Brand:</div>
+                    <div class='col-md-6'>{{car.brand}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Manufacturer:</div>
+                    <div class='col-md-6'>{{car.manufacturer}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Color:</div>
+                    <div class='col-md-6'>{{car.color}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Seats Number:</div>
+                    <div class='col-md-6'>{{car.seatNumber}}</div>
+                </div>
+                
+                
+                <div class='row'>
+                    <div class='col-md-3'>Engine Volume:</div>
+                    <div class='col-md-6'>{{car.engineVolume}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Transmission:</div>
+                    <div class='col-md-6'>{{car.transmission}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Rented?:</div>
+                    <div class='col-md-6'>{{car.rented}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Owner User ?:</div>
+                    <div class='col-md-6'>{{car.ownerUser}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Owner Shop ?:</div>
+                    <div class='col-md-6'>{{car.ownerShop}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Car price:</div>
+                    <div class='col-md-6'>{{car.priceBuyCar|currency:'Eur':true}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Rent price:</div>
+                    <div class='col-md-6'>{{car.priceRentCar|currency:'Eur':true}}</div>
+                </div>
+            </div>
+
+            <div class='col-md-6'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='car.imageUrl'
+                     [title]='car.brand'>
+            </div>
+        </div>
+    </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+</div>

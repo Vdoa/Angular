@@ -1,0 +1,78 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+
+    <!-- Filter the Cars   -->
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-2'>Filter by:</div>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='listFilter' />
+            </div>
+        </div>
+        <div class='row' *ngIf='listFilter'>
+            <div class='col-md-6'>
+                <h3>Filtered by: {{listFilter}} </h3>
+            </div>
+        </div>
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <table class='table' *ngIf='car && car.length'>
+                <thead>
+                    <tr>
+                        <th>
+                            <button class='btn btn-primary' (click)='toggleImage()'>
+                                {{showImage ? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>
+                        <th>Car</th>
+                        <th>Manufacturer</th>
+                        <th>Color</th>
+                        <th>Volume</th>
+                        <th>Transmission</th>
+                        <th>Rented</th>
+                        <th>ownerUser</th>
+                        <th>ownerShop</th>
+                        <th>priceBuyCar</th>
+                        <th>priceRentCar</th>
+             
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='#car of cars | carFilter:listFilter'>
+                        <td>
+                            <img *ngIf='showImage'
+                                 [src]='car.imageUrl'
+                                 [title]='car.brand | uppercase'
+                                 [style.width.px]='imageWidth' 
+                                 [style.margin.px]='imageMargin'>
+                        </td>
+                        <td> <a [routerLink]="['CarDetail',{id: car.carId}]">
+                            {{car.brand}}
+                            </a>
+                        </td>
+                        <td>{{ car.manufacturer | lowercase }}</td>
+                        <td>{{ car.Color }}</td>
+                        
+                        <td>{{ car.seatNumber }}</td>
+                        <td>{{ car.engineVolume }}</td>
+                        <td>{{ car.transmission }}</td>
+                        <td>{{ car.ownerUser }}</td>
+                        <td>{{ car.ownerShop }}</td>
+                        <td>{{ car.priceBuyCar | currency:'Eur':true:'1.2-2' }}</td>
+                        
+                        <td>{{ car.priceRentCar | currency:'Eur':true:'1.2-2' }}</td>
+                        <td>
+                            <ai-star [rating]='car.starRating'
+                                    (ratingClicked)='onRatingClicked($event)'>
+                            </ai-star>
+                       </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

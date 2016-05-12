@@ -1,0 +1,63 @@
+[
+    {
+        "carId": 1,
+        "brand": "Golf",
+        "manufacturer": "VW",
+        "color": "white",
+        "seatNumber": 5,
+        "engineVolume": 1900,
+        "transmission": "Manual",
+        "rented": false,
+        "ownerUser": 1,
+        "ownerShop": null,
+        "priceBuyCar": 15000.50,
+        "priceRentCar": 100.00,
+        "imageUrl": "http://thumbs.dreamstime.com/x/volkswagen-golf-5-10877801.jpg"
+    },
+    {
+        "carId": 2,
+        "brand": "Pasat",
+        "manufacturer": "VW",
+        "color": "white",
+        "seatNumber": 5,
+        "engineVolume": 1980,
+        "transmission": "Manual",
+        "rented": false,
+        "ownerUser": null,
+        "ownerShop": 1,
+        "priceBuyCar": 19000.50,
+        "priceRentCar": 110.00,
+        "imageUrl": "http://sr.photos2.fotosearch.com/bthumb/UNC/UNC114/u18566824.jpg"
+    },
+    {
+        "carId": 3,
+        "brand": "A4",
+        "manufacturer": "Audi",
+        "color": "blue",
+        "seatNumber": 5,
+        "engineVolume": 1990,
+        "transmission": "Auto",
+        "rented": false,
+        "ownerUser": null,
+        "ownerShop": 1,
+        "priceBuyCar": 25000.50,
+        "priceRentCar": 100.00,
+        "imageUrl": "http://mr-clipart.com/images/vehicle-templates-3d/audi014.jpg"
+    },
+    {
+        "carId": 1,
+        "brand": "A Class",
+        "manufacturer": "Mercedes",
+        "color": "white",
+        "seatNumber": 5,
+        "engineVolume": 2500,
+        "transmission": "Manual",
+        "rented": false,
+        "ownerUser": null,
+        "ownerShop": 1,
+        "priceBuyCar": 15000.50,
+        "priceRentCar": 100.00,
+        "imageUrl": "http://www.free-vectors.com/images/Transport/140-mercedes-benz-vector.png"
+    }
+
+]
