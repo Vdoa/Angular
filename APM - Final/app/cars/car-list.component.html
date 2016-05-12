@@ -51,12 +51,7 @@
                         </td>
                         <td>{{ car.manufacturer | lowercase }}</td>
                         <td>{{ car.Color }}</td>
-                        <td>
-                            <ai-star [rating]='car.starRating'
-                                    (ratingClicked)='onRatingClicked($event)'>
-                            </ai-star>
-                       </td>
-                    </tr>
+                   </tr>
                 </tbody>
             </table>
         </div>
