@@ -31,13 +31,8 @@
                         <th>Car</th>
                         <th>Manufacturer</th>
                         <th>Color</th>
-                        <th>Volume</th>
-                        <th>Transmission</th>
-                        <th>Rented</th>
-                        <th>ownerUser</th>
-                        <th>ownerShop</th>
-                        <th>priceBuyCar</th>
-                        <th>priceRentCar</th>
+                        
+
              
                     </tr>
                 </thead>
@@ -56,15 +51,6 @@
                         </td>
                         <td>{{ car.manufacturer | lowercase }}</td>
                         <td>{{ car.Color }}</td>
-                        
-                        <td>{{ car.seatNumber }}</td>
-                        <td>{{ car.engineVolume }}</td>
-                        <td>{{ car.transmission }}</td>
-                        <td>{{ car.ownerUser }}</td>
-                        <td>{{ car.ownerShop }}</td>
-                        <td>{{ car.priceBuyCar | currency:'Eur':true:'1.2-2' }}</td>
-                        
-                        <td>{{ car.priceRentCar | currency:'Eur':true:'1.2-2' }}</td>
                         <td>
                             <ai-star [rating]='car.starRating'
                                     (ratingClicked)='onRatingClicked($event)'>

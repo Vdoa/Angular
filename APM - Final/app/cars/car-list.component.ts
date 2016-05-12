@@ -8,7 +8,7 @@ import { CarService } from './car.service';
 
 @Component({
     templateUrl: 'app/cars/car-list.component.html',
-    styleUrls: ['app/carss/car-list.component.css'],
+    styleUrls: ['app/cars/car-list.component.css'],
     pipes: [CarFilterPipe],
     directives: [StarComponent, ROUTER_DIRECTIVES]
 })
